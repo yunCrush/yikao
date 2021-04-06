@@ -1,0 +1,19 @@
+# 配置服务端口
+server:
+  port: 9000
+# Spring session有效期60s
+spring:
+  session:
+    timeout: 60
+# redis配置
+  redis:
+    host:
+    password:
+    port: 6379
+# 邮箱的发送方配置
+  mail:
+    host: smtp.163.com
+    username:
+    password:
+
+

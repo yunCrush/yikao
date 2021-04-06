@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片验证码</title>
+</head>
+
+<script src="/static/jquery-3.4.1.min.js"></script>
+<style>
+    .form {
+        width: 500px;
+        height: 300px;
+        border: 2px solid grey;
+        text-align: center;
+        margin: 0 auto;
+        background-image: url("雪山.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+    }
+</style>
+<body>
+<form action="checkCaptcha">
+    <div class="form">
+        <div class="div4">
+            <div>
+                <a href="javaScript:reloadCaptcha()"><img src="../captcha" id="captchaImg"></a>
+            </div>
+
+            <label >验证码</label>
+            <input type="text" name="captcha" placeholder="请输入图片验证码">
+            <div>
+                <button type="submit">提交</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+
+    // 刷新图片验证码
+    function  reloadCaptcha() {
+        var captchaImg=document.getElementById("captchaImg");
+        captchaImg.src="/getCaptcha?t="+(new Date()).getTime();
+    }
+    setTimeout(function(){
+        reloadCaptcha()
+    },0);
+</script>
+</body>
+</html>

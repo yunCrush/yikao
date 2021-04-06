@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>邮箱验证码</title>
+    <script src="/jquery-3.4.1.min.js"></script>
+    <style>
+        .form {
+            width: 500px;
+            height: 300px;
+            border: 2px solid grey;
+            text-align: center;
+            margin: 0 auto;
+            background-image: url("雪山.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+        }
+    </style>
+</head>
+<body>
+<form action="/signup" method="post">
+    <div class="form">
+
+        <div>
+            <label>Name</label>
+            <input type="text" name="name" placeholder="请输入名字">
+        </div>
+        <div>
+            <input type="text" name="password" placeholder="请输入密码">
+        </div>
+        <div class="signin-btn">
+            <button type="submit">登陆</button>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

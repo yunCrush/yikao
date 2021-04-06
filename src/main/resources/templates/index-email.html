@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>邮箱验证码</title>
+    <script src="/jquery-3.4.1.min.js"></script>
+    <style>
+        .form {
+            width: 500px;
+            height: 300px;
+            border: 2px solid grey;
+            text-align: center;
+            margin: 0 auto;
+            background-image: url("雪山.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+        }
+    </style>
+</head>
+<body>
+<form action="/checkemailcode" method="post" th:object="${yikao}">
+    <div class="form">
+
+
+        <label>邮箱</label>
+        <input type="text" name="email" th:field="*{email}" id="email" placeholder="请输入邮箱">
+        <div> <input type="text" name="emailCode" placeholder="请输入邮箱验证码"></div>
+
+       <div>
+        <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+           <button><a href="#" id="getCode">获取验证码 </a></button>
+        <p th:if="${#fields.hasErrors('emailCode')}" th:errors="*{emailCode}"></p>
+       </div>
+
+        <div class="signin-btn">
+            <button type="submit">登陆</button>
+        </div>
+    </div>
+</form>
+<script>
+    // 获取邮箱验证码
+    document.getElementById("getCode").addEventListener("click", function (ev) {
+
+        var email = document.getElementById("email").value;
+      console.info(email)
+        fetch("sendemail?email=" + email);
+        alert("邮件已经发送");
+
+    })
+
+</script>
+</body>
+</html>
