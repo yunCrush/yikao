@@ -44,8 +44,12 @@
 
         var email = document.getElementById("email").value;
       console.info(email)
-        fetch("sendemail?email=" + email);
-        alert("邮件已经发送");
+        if (email.length==0){
+            alert("邮箱不能为空")
+        }else{
+            fetch("sendemail?email=" + email);
+            alert("邮件已经发送");
+        }
 
     })
 
