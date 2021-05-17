@@ -26,10 +26,10 @@
  **项目截图:**
 
   <img width="430" height="250" src="https://github.com/yunCrush/yikao/blob/main/docs/toCaptcha.jpg"/><img width="430" height="250" src="https://github.com/yunCrush/yikao/blob/main/docs/toEmail.jpg"/>
-
+<!--
  <img width="430" height="250" src="https://github.com/yunCrush/yikao/blob/main/docs/index.jpg"/><img width="430" height="250" src="https://github.com/yunCrush/yikao/blob/main/docs/signout.jpg"/>
 
- <img width="430" height="250" src="https://github.com/yunCrush/yikao/blob/main/docs/globalException.jpg"/><img width="430" height="250" src="https://github.com/yunCrush/yikao/blob/main/docs/success.jpg"/>
+ <img width="430" height="250" src="https://github.com/yunCrush/yikao/blob/main/docs/globalException.jpg"/><img width="430" height="250" src="https://github.com/yunCrush/yikao/blob/main/docs/success.jpg"/> -->
 
 
 
